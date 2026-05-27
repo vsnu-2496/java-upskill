@@ -5,42 +5,83 @@
     <title>Event Registration Form</title>
 
     <style>
-        body {
 
-            background-color: #e7d5d5;
-        }
+    body{
+        background: linear-gradient(135deg,#e7d5d5,#d8e4ff);
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:40px;
+    }
 
-        form {
-            width: 400px;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
+    form{
+        width:400px;
+        margin:auto;
+        background-color:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
 
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
+    h2{
+        text-align:center;
+        color:#2b2bbd;
+        margin-bottom:25px;
+    }
 
-        button {
-            background-color: blue;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            cursor: pointer;
-        }
+    input,
+    select,
+    textarea{
+        width:100%;
+        padding:12px;
+        margin-top:10px;
+        margin-bottom:18px;
+        border:1px solid #bbb;
+        border-radius:8px;
+        font-size:15px;
+        box-sizing:border-box;
+        transition:0.3s;
+    }
 
-        output {
-            color: green;
-            font-weight: bold;
-        }
-    </style>
+    input:focus,
+    select:focus,
+    textarea:focus{
+        outline:none;
+        border:2px solid #4b4bff;
+        box-shadow:0 0 5px rgba(75,75,255,0.4);
+    }
+
+    button{
+        background: linear-gradient(90deg,#3d5afe,#1a237e);
+        color:white;
+        border:none;
+        padding:12px;
+        width:100%;
+        cursor:pointer;
+        border-radius:8px;
+        font-size:16px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background: linear-gradient(90deg,#1a237e,#0d1452);
+        transform:scale(1.02);
+    }
+
+    textarea{
+        resize:none;
+        height:100px;
+    }
+
+    output{
+        color:green;
+        font-weight:bold;
+        display:block;
+        margin-top:15px;
+        text-align:center;
+    }
+
+</style>
 </head>
 
 <body>

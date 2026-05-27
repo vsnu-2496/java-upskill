@@ -7,116 +7,174 @@
     <title>Community Event Portal</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
 
-        #navbar {
-            background-color: #b7b7ff;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+    body{
+        margin:0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #eef1ff;
+        color:#222;
+    }
 
-        #navbar a {
-            text-decoration: none;
-            color: black;
-            margin: 15px;
-            font-size: 18px;
-        }
+    /* Navigation */
 
-        #navbar a:hover {
-            color: blue;
-        }
+    #navbar{
+        background: linear-gradient(90deg,#4b4bc9,#6d6df5);
+        padding:18px;
+        text-align:center;
+        position:sticky;
+        top:0;
+        z-index:1000;
+        box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    }
 
-        #welcomeBanner {
-            background-color: #2b2bbd;
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
+    #navbar a{
+        text-decoration:none;
+        color:white;
+        margin:0 18px;
+        font-size:18px;
+        font-weight:bold;
+        transition:0.3s;
+    }
 
-        .highlight {
-            background-color: yellow;
-            color: black;
-            display: inline-block;
-            padding: 8px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    #navbar a:hover{
+        color:yellow;
+    }
 
-        button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            margin-top: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    /* Welcome Banner */
 
-        button:hover {
-            background-color: darkred;
-        }
+    #welcomeBanner{
+        background: linear-gradient(135deg,#2b2bbd,#5d5df0);
+        color:white;
+        text-align:center;
+        padding:60px 20px;
+    }
 
-        #events {
-            background-color: #7a7af3;
-            text-align: center;
-            padding: 30px;
-        }
+    #welcomeBanner h1{
+        font-size:42px;
+        margin-bottom:15px;
+    }
 
-        table {
-            width: 100%;
-        }
+    .highlight{
+        background-color:yellow;
+        color:black;
+        display:inline-block;
+        padding:10px 18px;
+        border-radius:30px;
+        font-weight:bold;
+        margin-top:10px;
+    }
 
-        td {
-            padding: 10px;
-        }
+    button{
+        background:linear-gradient(90deg,#ff4b4b,#d60000);
+        color:white;
+        border:none;
+        padding:12px 24px;
+        margin-top:18px;
+        border-radius:30px;
+        cursor:pointer;
+        font-size:16px;
+        font-weight:bold;
+        transition:0.3s;
+    }
 
-        .eventImg {
-            width: 100%;
-            height: 250px;
-            border-radius: 8px;
-            border: 3px solid white;
-            object-fit: cover;
-            transition: 0.3s;
-            cursor: pointer;
-        }
+    button:hover{
+        transform:scale(1.05);
+        background:linear-gradient(90deg,#d60000,#900000);
+    }
 
-        #footer {
-            background-color: #5a5ac8;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+    /* Events */
 
-        form {
-            background-color: white;
-            color: black;
-            width: 350px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
-        }
+    #events{
+        background:#7a7af3;
+        padding:50px 20px;
+        text-align:center;
+        color:white;
+    }
 
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
+    #events h1{
+        margin-bottom:30px;
+        font-size:36px;
+    }
 
-        #fee {
-            color: blue;
-            font-weight: bold;
-        }
-    </style>
+    table{
+        width:100%;
+        border-spacing:20px;
+    }
+
+    td{
+        padding:10px;
+    }
+
+    .eventImg{
+        width:100%;
+        height:260px;
+        border-radius:15px;
+        border:4px solid white;
+        object-fit:cover;
+        transition:0.4s;
+        cursor:pointer;
+        box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .eventImg:hover{
+        transform:translateY(-8px);
+    }
+
+    /* Footer */
+
+    #footer{
+        background:linear-gradient(135deg,#4747b8,#6c6cff);
+        color:white;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    #footer h1,
+    #footer h2{
+        margin-bottom:20px;
+    }
+
+    /* Form */
+
+    form{
+        background:white;
+        color:black;
+        width:380px;
+        margin:auto;
+        padding:25px;
+        border-radius:15px;
+        text-align:left;
+        box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    input,
+    select,
+    textarea{
+        width:100%;
+        padding:10px;
+        margin-top:6px;
+        margin-bottom:18px;
+        border:1px solid #bbb;
+        border-radius:8px;
+        font-size:15px;
+        box-sizing:border-box;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+        outline:none;
+        border:2px solid #5a5af5;
+    }
+
+    #fee{
+        color:#2b2bbd;
+        font-weight:bold;
+        margin-top:-8px;
+        margin-bottom:15px;
+    }
+
+</style>
 </head>
 
 <body>
