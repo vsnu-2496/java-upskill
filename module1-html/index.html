@@ -2,276 +2,155 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
     <title>Community Event Portal</title>
 
-    <style>
+    <link rel="stylesheet"
+    href="../module1-css/style.css">
 
-    body{
-        margin:0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #eef1ff;
-        color:#222;
-    }
-
-    /* Navigation */
-
-    #navbar{
-        background: linear-gradient(90deg,#4b4bc9,#6d6df5);
-        padding:18px;
-        text-align:center;
-        position:sticky;
-        top:0;
-        z-index:1000;
-        box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    #navbar a{
-        text-decoration:none;
-        color:white;
-        margin:0 18px;
-        font-size:18px;
-        font-weight:bold;
-        transition:0.3s;
-    }
-
-    #navbar a:hover{
-        color:yellow;
-    }
-
-    /* Welcome Banner */
-
-    #welcomeBanner{
-        background: linear-gradient(135deg,#2b2bbd,#5d5df0);
-        color:white;
-        text-align:center;
-        padding:60px 20px;
-    }
-
-    #welcomeBanner h1{
-        font-size:42px;
-        margin-bottom:15px;
-    }
-
-    .highlight{
-        background-color:yellow;
-        color:black;
-        display:inline-block;
-        padding:10px 18px;
-        border-radius:30px;
-        font-weight:bold;
-        margin-top:10px;
-    }
-
-    button{
-        background:linear-gradient(90deg,#ff4b4b,#d60000);
-        color:white;
-        border:none;
-        padding:12px 24px;
-        margin-top:18px;
-        border-radius:30px;
-        cursor:pointer;
-        font-size:16px;
-        font-weight:bold;
-        transition:0.3s;
-    }
-
-    button:hover{
-        transform:scale(1.05);
-        background:linear-gradient(90deg,#d60000,#900000);
-    }
-
-    /* Events */
-
-    #events{
-        background:#7a7af3;
-        padding:50px 20px;
-        text-align:center;
-        color:white;
-    }
-
-    #events h1{
-        margin-bottom:30px;
-        font-size:36px;
-    }
-
-    table{
-        width:100%;
-        border-spacing:20px;
-    }
-
-    td{
-        padding:10px;
-    }
-
-    .eventImg{
-        width:100%;
-        height:260px;
-        border-radius:15px;
-        border:4px solid white;
-        object-fit:cover;
-        transition:0.4s;
-        cursor:pointer;
-        box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .eventImg:hover{
-        transform:translateY(-8px);
-    }
-
-    /* Footer */
-
-    #footer{
-        background:linear-gradient(135deg,#4747b8,#6c6cff);
-        color:white;
-        text-align:center;
-        padding:50px 20px;
-    }
-
-    #footer h1,
-    #footer h2{
-        margin-bottom:20px;
-    }
-
-    /* Form */
-
-    form{
-        background:white;
-        color:black;
-        width:380px;
-        margin:auto;
-        padding:25px;
-        border-radius:15px;
-        text-align:left;
-        box-shadow:0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    input,
-    select,
-    textarea{
-        width:100%;
-        padding:10px;
-        margin-top:6px;
-        margin-bottom:18px;
-        border:1px solid #bbb;
-        border-radius:8px;
-        font-size:15px;
-        box-sizing:border-box;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus{
-        outline:none;
-        border:2px solid #5a5af5;
-    }
-
-    #fee{
-        color:#2b2bbd;
-        font-weight:bold;
-        margin-top:-8px;
-        margin-bottom:15px;
-    }
-
-</style>
 </head>
 
 <body>
 
+    <!-- Navigation -->
+
     <div id="navbar">
+
         <a href="#">Home</a>
+
         <a href="#events">Events</a>
+
         <a href="#footer">Contact</a>
-        <a href="help.html" target="_blank">Help</a>
+
+        <a href="help.html"
+        target="_blank">
+
+        Help
+
+        </a>
+
     </div>
+
+    <!-- Welcome Banner -->
 
     <div id="welcomeBanner">
 
-        <h1>Welcome to Community Events</h1>
+        <h1>
+            Welcome to Community Events
+        </h1>
 
-        <span style="color:red; font-weight:bold; font-size:28px;">
+        <span class="offer">
             Special Offer!
         </span>
 
         <p>
-            First 20 registrations will get 10% discount
+            First 20 registrations
+            will get 10% discount
         </p>
 
         <p class="highlight">
             Hurry! Seats are Limited
         </p>
 
-        <br>
+        <a href="register.html"
+        target="_blank">
 
-        <a href="register.html" target="_blank">
             <button>
                 Register Now
             </button>
+
         </a>
 
     </div>
+
+    <!-- Events -->
 
     <div id="events">
 
         <h1>Past Event Images</h1>
 
-        <table>
-
-            <tr>
-
-                <td>
-                    <img src="./src/img1.webp" class="eventImg" ondblclick="enlargeImage(this)" alt="event image">
-                </td>
-
-                <td>
-                    <img src="./src/img2.webp" class="eventImg" ondblclick="enlargeImage(this)" alt="event image">
-                </td>
-
-                <td>
-                    <img src="./src/img3.webp" class="eventImg" ondblclick="enlargeImage(this)" alt="event image">
-                </td>
-
-            </tr>
-
-        </table>
+        <div id="eventContainer"></div>
 
     </div>
+
+    <!-- Footer -->
 
     <div id="footer">
 
         <h1>Contact Us</h1>
 
-        <p>Email : communityevents@gmail.com</p>
-        <p>Phone : 9876543210</p>
+        <p>
+            Email :
+            communityevents@gmail.com
+        </p>
+
+        <p>
+            Phone :
+            9876543210
+        </p>
 
         <h2>Feedback Form</h2>
 
-        <form onsubmit="submitForm(event)">
+        <form id="registerForm">
 
-            Name:
-            <input type="text" placeholder="Enter your name" required autofocus>
+            <label>Name:</label>
 
-            Email:
-            <input type="email" placeholder="Enter your email" required>
+            <input type="text"
+            name="username"
+            placeholder="Enter your name"
+            required autofocus>
 
-            Phone:
-            <input type="text" id="phone" placeholder="Enter phone number" onblur="validatePhone()" required>
+            <label>Email:</label>
 
-            Event Type:
-            <select id="eventType" onchange="showFee()" required>
+            <input type="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
 
-                <option value="">Select Event</option>
-                <option value="500">Workshop</option>
-                <option value="1000">Hackathon</option>
-                <option value="1500">Seminar</option>
+            <label>Phone:</label>
+
+            <input type="text"
+            id="phone"
+            placeholder="Enter phone number"
+            onblur="validatePhone()"
+            required>
+
+            <label>Event Type:</label>
+
+            <select id="eventType"
+            onchange="showFee()"
+            required>
+
+                <option value="">
+                    Select Event
+                </option>
+
+                <option value="500">
+                    Workshop
+                </option>
+
+                <option value="1000">
+                    Hackathon
+                </option>
+
+                <option value="1500">
+                    Seminar
+                </option>
 
             </select>
 
             <p id="fee"></p>
 
-            Feedback:
-            <textarea id="feedback" placeholder="Enter your feedback" onkeyup="countCharacters()"></textarea>
+            <label>Feedback:</label>
+
+            <textarea id="feedback"
+            placeholder="Enter feedback"
+            onkeyup="countCharacters()"></textarea>
 
             <p>
                 Characters Typed :
@@ -282,58 +161,14 @@
                 Submit Feedback
             </button>
 
+            <p id="message"></p>
+
         </form>
 
     </div>
 
-    <script>
-
-        function validatePhone() {
-
-            let phone =
-                document.getElementById("phone").value;
-
-            if (phone.length != 10) {
-
-                alert("Phone number should contain 10 digits");
-
-            }
-        }
-
-        function showFee() {
-
-            let fee =
-                document.getElementById("eventType").value;
-
-            document.getElementById("fee").innerHTML =
-                "Event Fee : ₹" + fee;
-
-        }
-
-        function countCharacters() {
-
-            let text =
-                document.getElementById("feedback").value;
-
-            document.getElementById("count").innerHTML =
-                text.length;
-
-        }
-
-        function enlargeImage(image) {
-
-            image.style.width = "500px";
-            image.style.height = "350px";
-
-        }
-
-        function submitForm(event) {
-
-            event.preventDefault();
-
-            alert("Feedback Submitted Successfully!");
-
-        }
+    <script src=
+    "../module1-javascript/main.js">
 
     </script>
 
